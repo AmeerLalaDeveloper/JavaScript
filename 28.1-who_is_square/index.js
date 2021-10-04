@@ -11,12 +11,12 @@ const hero = {
 
 
     const myStrength = 82;
-    if (this.getStrength() < myStrength){
+    if (getStrength() < myStrength){
     return "I am stronger";
     } else return "You are stronger";
    }
    
-
-whoIsStronger.call(hero,hero.getStrength)
-
+console.log(
+whoIsStronger(hero.getStrength.bind(hero))
+);
   
