@@ -69,7 +69,6 @@ async function createWarriors(){
 (async function(){
  const items=
  await Promise.all(await createWarriors())
-  
   createTable(items)
   //createTable2(items)
 })();
@@ -77,7 +76,7 @@ async function createWarriors(){
 function createTable(warriors){
     
     let table=
-   `<table style="width:100%">
+   `<table>
   <tr>
     <th>name</th>
     <th>hair</th>
