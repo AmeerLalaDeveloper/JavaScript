@@ -66,13 +66,10 @@ async function createWarriors(){
   })
 }
 
-createWarriors().then((data)=>{
- Promise.all(data).then((items)=>{
-   createTable(items)
- })
-}
-)
-
+(async function(){
+ const items=await Promise.all(await createWarriors())
+  createTable(items)
+})();
 function createTable(warriors){
     
     let table=
